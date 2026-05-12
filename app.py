@@ -100,6 +100,12 @@ def get_task(task_id):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    print(f"\n  ✅  Server berjalan di http://localhost:{port}")
-    print(f"  🌐  Buka browser ke http://localhost:{port}\n")
-    app.run(debug=True, port=port)
+
+    print(f"\n✅ Server berjalan di http://localhost:{port}")
+    print(f"🌐 Buka browser ke http://localhost:{port}\n")
+
+    app.run(
+        host="0.0.0.0",
+        port=port,
+        debug=True
+    )
